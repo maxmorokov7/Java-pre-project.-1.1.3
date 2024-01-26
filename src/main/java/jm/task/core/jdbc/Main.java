@@ -10,7 +10,7 @@ public class Main {
 
     // реализуйте алгоритм здесь
     public static void main(String[] args) {
-//        Util.getConnection();
+
         UserService userServ = new UserServiceImpl();
 
         userServ.createUsersTable();

@@ -13,10 +13,10 @@ import static jm.task.core.jdbc.util.Util.getConnection;
 
 public class UserDaoJDBCImpl implements UserDao {
 
-    private Connection connection = getConnection();
+    private Connection connection;
 
     public UserDaoJDBCImpl() {
-
+        this.connection = Util.getConnection();
     }
 
     public void createUsersTable() {
