@@ -7,7 +7,7 @@ import jm.task.core.jdbc.model.User;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-    UserDao userDao = new UserDaoJDBCImpl();
+    private final UserDao userDao = new UserDaoJDBCImpl();
 
     public void createUsersTable() {
         userDao.createUsersTable();
@@ -19,16 +19,15 @@ public class UserServiceImpl implements UserService {
 
     public void saveUser(String name, String lastName, byte age) {
         userDao.saveUser(name,lastName,age);
-        System.out.printf("User с именем – %s добавлен в базу данных \n", name);
+        System.out.printf("User СЃ РёРјРµРЅРµРј вЂ“ %s РґРѕР±Р°РІР»РµРЅ РІ Р±Р°Р·Сѓ РґР°РЅРЅС‹С… \n", name);
     }
 
     public void removeUserById(long id) {
         userDao.removeUserById(id);
-        System.out.println("пользователь удален");
+        System.out.println("РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ СѓРґР°Р»РµРЅ");
     }
 
     public List<User> getAllUsers() {
-        System.out.println(userDao.getAllUsers());
         return userDao.getAllUsers();
     }
 
