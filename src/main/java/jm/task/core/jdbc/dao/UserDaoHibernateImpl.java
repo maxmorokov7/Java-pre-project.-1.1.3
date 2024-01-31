@@ -16,8 +16,6 @@ public class UserDaoHibernateImpl implements UserDao {
 
     private final SessionFactory sessionFactory = Util.getSessionFactory();
 
-//    Query query  = session.getCurrentSession().createQuery();
-
     @Override
     public void createUsersTable() {
         try (Session session = sessionFactory.openSession()) {
